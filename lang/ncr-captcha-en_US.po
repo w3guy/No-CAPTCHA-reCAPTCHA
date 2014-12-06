@@ -1,0 +1,268 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: No CAPTCHA reCAPTCHA\n"
+"POT-Creation-Date: 2014-12-06 16:04+0100\n"
+"PO-Revision-Date: 2014-12-06 16:05+0100\n"
+"Last-Translator: Agbonghama Collins <admin@tech4sky.com>\n"
+"Language-Team: Agbonghama Collins <admin@tech4sky.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: settings.php:69
+msgid "reCAPTCHA Keys"
+msgstr ""
+
+#: settings.php:75
+msgid "Site key"
+msgstr ""
+
+#: settings.php:82
+msgid ""
+"Used for displaying the CAPTCHA. Grab it <a href=\"https://www.google.com/"
+"recaptcha/admin\" target=\"_blank\">Here</a>"
+msgstr ""
+
+#: settings.php:89
+msgid "Secret key"
+msgstr ""
+
+#: settings.php:96
+msgid ""
+"Used for communication between your site and Google. Grab it <a href="
+"\"https://www.google.com/recaptcha/admin\" target=\"_blank\">Here</a>"
+msgstr ""
+
+#: settings.php:112
+msgid "Display Settings"
+msgstr ""
+
+#: settings.php:117
+msgid "Login Form"
+msgstr ""
+
+#: settings.php:124
+msgid "Check to enable CAPTCHA in login form"
+msgstr ""
+
+#: settings.php:131
+msgid "Registration Form"
+msgstr ""
+
+#: settings.php:138
+msgid "Check to enable CAPTCHA in WordPress registration form"
+msgstr ""
+
+#: settings.php:143
+msgid "Comment Form"
+msgstr ""
+
+#: settings.php:150
+msgid "Check to enable CAPTCHA in WordPress comment system"
+msgstr ""
+
+#: settings.php:167
+msgid "General Settings"
+msgstr ""
+
+#: settings.php:174
+msgid "Theme"
+msgstr ""
+
+#: settings.php:182
+msgid "The theme colour of the widget."
+msgstr ""
+
+#: settings.php:191
+msgid "Language"
+msgstr ""
+
+#: settings.php:197
+msgid "Auto Detect"
+msgstr ""
+
+#: settings.php:198
+msgid "English"
+msgstr ""
+
+#: settings.php:199
+msgid "Arabic"
+msgstr ""
+
+#: settings.php:200
+msgid "Bulgarian"
+msgstr ""
+
+#: settings.php:201
+msgid "Catalan Valencian"
+msgstr ""
+
+#: settings.php:202
+msgid "Czech"
+msgstr ""
+
+#: settings.php:203
+msgid "Danish"
+msgstr ""
+
+#: settings.php:204
+msgid "German"
+msgstr ""
+
+#: settings.php:205
+msgid "Greek"
+msgstr ""
+
+#: settings.php:206
+msgid "British English"
+msgstr ""
+
+#: settings.php:207
+msgid "Spanish"
+msgstr ""
+
+#: settings.php:208
+msgid "Persian"
+msgstr ""
+
+#: settings.php:209
+msgid "French"
+msgstr ""
+
+#: settings.php:210
+msgid "Canadian French"
+msgstr ""
+
+#: settings.php:211
+msgid "Hindi"
+msgstr ""
+
+#: settings.php:212
+msgid "Croatian"
+msgstr ""
+
+#: settings.php:213
+msgid "Hungarian"
+msgstr ""
+
+#: settings.php:214
+msgid "Indonesian"
+msgstr ""
+
+#: settings.php:215
+msgid "Italian"
+msgstr ""
+
+#: settings.php:216
+msgid "Hebrew"
+msgstr ""
+
+#: settings.php:217
+msgid "Jananese"
+msgstr ""
+
+#: settings.php:218
+msgid "Korean"
+msgstr ""
+
+#: settings.php:219
+msgid "Lithuanian"
+msgstr ""
+
+#: settings.php:220
+msgid "Latvian"
+msgstr ""
+
+#: settings.php:221
+msgid "Dutch"
+msgstr ""
+
+#: settings.php:222
+msgid "Norwegian"
+msgstr ""
+
+#: settings.php:223
+msgid "Polish"
+msgstr ""
+
+#: settings.php:224
+msgid "Portuguese"
+msgstr ""
+
+#: settings.php:225
+msgid "Romanian"
+msgstr ""
+
+#: settings.php:226
+msgid "Russian"
+msgstr ""
+
+#: settings.php:227
+msgid "Slovak"
+msgstr ""
+
+#: settings.php:228
+msgid "Slovene"
+msgstr ""
+
+#: settings.php:229
+msgid "Serbian"
+msgstr ""
+
+#: settings.php:230
+msgid "Swedish"
+msgstr ""
+
+#: settings.php:231
+msgid "Thai"
+msgstr ""
+
+#: settings.php:232
+msgid "Turkish"
+msgstr ""
+
+#: settings.php:233
+msgid "Ukrainian"
+msgstr ""
+
+#: settings.php:234
+msgid "Vietnamese"
+msgstr ""
+
+#: settings.php:235
+msgid "Simplified Chinese"
+msgstr ""
+
+#: settings.php:236
+msgid "Traditional Chinese"
+msgstr ""
+
+#: settings.php:246
+msgid "Forces the widget to render in a specific language"
+msgstr ""
+
+#: settings.php:254
+msgid "Error Message"
+msgstr ""
+
+#: settings.php:261
+msgid ""
+"Message or text to display when CAPTCHA is ignored or the test is failed."
+msgstr ""
+
+#: settings.php:283
+msgid "Developer"
+msgstr ""
+
+#: settings.php:294
+msgid "Ads"
+msgstr ""
