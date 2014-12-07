@@ -34,9 +34,13 @@ class Ncr_No_Captcha_Recaptcha {
 
 		add_action( 'plugins_loaded', array( __CLASS__, 'load_plugin_textdomain' ) );
 
-		add_action( 'login_enqueue_scripts', array( __CLASS__, 'header_script' ) );
+		// initialize if login is activated
+		if ( ( isset( self::$plugin_options['captcha_registration'] ) && self::$plugin_options['captcha_registration'] == 'yes' ) || ( isset( self::$plugin_options['captcha_login'] ) && self::$plugin_options['captcha_login'] == 'yes' ) ) {
 
-		add_action( 'login_enqueue_scripts', array( __CLASS__, 'default_wp_login_reg_css' ) );
+			add_action( 'login_enqueue_scripts', array( __CLASS__, 'header_script' ) );
+
+			add_action( 'login_enqueue_scripts', array( __CLASS__, 'default_wp_login_reg_css' ) );
+		}
 	}
 
 	public static function load_plugin_textdomain() {
@@ -52,8 +56,7 @@ class Ncr_No_Captcha_Recaptcha {
 		// reCAPTCHA script url
 		if ( isset( $lang_option ) && ( ! empty( $lang_option ) ) ) {
 			$lang = "?hl=$lang_option";
-		}
-		else {
+		} else {
 			$lang = null;
 		}
 

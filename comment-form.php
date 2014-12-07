@@ -7,17 +7,21 @@ class Ncr_Comment_Captcha extends Ncr_No_Captcha_Recaptcha {
 
 	public static function initialize() {
 
-		// add captcha header script to WordPress header
-		add_action( 'wp_head', array( __CLASS__, 'header_script' ) );
+		// initialize if login is activated
+		if ( isset( self::$plugin_options['captcha_comment'] ) && self::$plugin_options['captcha_comment'] == 'yes' ) {
 
-		// adds the captcha to the comment form
-		add_action( 'comment_form', array( __CLASS__, 'display_captcha' ) );
+			// add captcha header script to WordPress header
+			add_action( 'wp_head', array( __CLASS__, 'header_script' ) );
 
-		// authenticate the captcha answer
-		add_filter( 'preprocess_comment', array( __CLASS__, 'validate_captcha_comment_field' ) );
+			// adds the captcha to the comment form
+			add_action( 'comment_form', array( __CLASS__, 'display_captcha' ) );
 
-		// redirect location for comment
-		add_filter( 'comment_post_redirect', array( __CLASS__, 'redirect_fail_captcha_comment' ), 10, 2 );
+			// authenticate the captcha answer
+			add_filter( 'preprocess_comment', array( __CLASS__, 'validate_captcha_comment_field' ) );
+
+			// redirect location for comment
+			add_filter( 'comment_post_redirect', array( __CLASS__, 'redirect_fail_captcha_comment' ), 10, 2 );
+		}
 	}
 
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: No CAPTCHA reCAPTCHA\n"
-"POT-Creation-Date: 2014-12-06 16:04+0100\n"
-"PO-Revision-Date: 2014-12-06 16:05+0100\n"
+"POT-Creation-Date: 2014-12-06 18:41+0100\n"
+"PO-Revision-Date: 2014-12-06 18:41+0100\n"
 "Last-Translator: Agbonghama Collins <admin@tech4sky.com>\n"
 "Language-Team: Agbonghama Collins <admin@tech4sky.com>\n"
 "Language: en_US\n"
@@ -18,251 +18,255 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: settings.php:69
+#: settings.php:75
 msgid "reCAPTCHA Keys"
 msgstr ""
 
-#: settings.php:75
+#: settings.php:81
 msgid "Site key"
 msgstr ""
 
-#: settings.php:82
+#: settings.php:88
 msgid ""
 "Used for displaying the CAPTCHA. Grab it <a href=\"https://www.google.com/"
 "recaptcha/admin\" target=\"_blank\">Here</a>"
 msgstr ""
 
-#: settings.php:89
+#: settings.php:95
 msgid "Secret key"
 msgstr ""
 
-#: settings.php:96
+#: settings.php:102
 msgid ""
 "Used for communication between your site and Google. Grab it <a href="
 "\"https://www.google.com/recaptcha/admin\" target=\"_blank\">Here</a>"
 msgstr ""
 
-#: settings.php:112
+#: settings.php:118
 msgid "Display Settings"
 msgstr ""
 
-#: settings.php:117
+#: settings.php:123
 msgid "Login Form"
 msgstr ""
 
-#: settings.php:124
+#: settings.php:130
 msgid "Check to enable CAPTCHA in login form"
 msgstr ""
 
-#: settings.php:131
+#: settings.php:137
 msgid "Registration Form"
 msgstr ""
 
-#: settings.php:138
+#: settings.php:144
 msgid "Check to enable CAPTCHA in WordPress registration form"
 msgstr ""
 
-#: settings.php:143
+#: settings.php:149
 msgid "Comment Form"
 msgstr ""
 
-#: settings.php:150
+#: settings.php:156
 msgid "Check to enable CAPTCHA in WordPress comment system"
 msgstr ""
 
-#: settings.php:167
+#: settings.php:173
 msgid "General Settings"
 msgstr ""
 
-#: settings.php:174
+#: settings.php:180
 msgid "Theme"
 msgstr ""
 
-#: settings.php:182
+#: settings.php:188
 msgid "The theme colour of the widget."
 msgstr ""
 
-#: settings.php:191
+#: settings.php:197
 msgid "Language"
 msgstr ""
 
-#: settings.php:197
+#: settings.php:203
 msgid "Auto Detect"
 msgstr ""
 
-#: settings.php:198
+#: settings.php:204
 msgid "English"
 msgstr ""
 
-#: settings.php:199
+#: settings.php:205
 msgid "Arabic"
 msgstr ""
 
-#: settings.php:200
+#: settings.php:206
 msgid "Bulgarian"
 msgstr ""
 
-#: settings.php:201
+#: settings.php:207
 msgid "Catalan Valencian"
 msgstr ""
 
-#: settings.php:202
+#: settings.php:208
 msgid "Czech"
 msgstr ""
 
-#: settings.php:203
+#: settings.php:209
 msgid "Danish"
 msgstr ""
 
-#: settings.php:204
+#: settings.php:210
 msgid "German"
 msgstr ""
 
-#: settings.php:205
+#: settings.php:211
 msgid "Greek"
 msgstr ""
 
-#: settings.php:206
+#: settings.php:212
 msgid "British English"
 msgstr ""
 
-#: settings.php:207
+#: settings.php:213
 msgid "Spanish"
 msgstr ""
 
-#: settings.php:208
+#: settings.php:214
 msgid "Persian"
 msgstr ""
 
-#: settings.php:209
+#: settings.php:215
 msgid "French"
 msgstr ""
 
-#: settings.php:210
+#: settings.php:216
 msgid "Canadian French"
 msgstr ""
 
-#: settings.php:211
+#: settings.php:217
 msgid "Hindi"
 msgstr ""
 
-#: settings.php:212
+#: settings.php:218
 msgid "Croatian"
 msgstr ""
 
-#: settings.php:213
+#: settings.php:219
 msgid "Hungarian"
 msgstr ""
 
-#: settings.php:214
+#: settings.php:220
 msgid "Indonesian"
 msgstr ""
 
-#: settings.php:215
+#: settings.php:221
 msgid "Italian"
 msgstr ""
 
-#: settings.php:216
+#: settings.php:222
 msgid "Hebrew"
 msgstr ""
 
-#: settings.php:217
+#: settings.php:223
 msgid "Jananese"
 msgstr ""
 
-#: settings.php:218
+#: settings.php:224
 msgid "Korean"
 msgstr ""
 
-#: settings.php:219
+#: settings.php:225
 msgid "Lithuanian"
 msgstr ""
 
-#: settings.php:220
+#: settings.php:226
 msgid "Latvian"
 msgstr ""
 
-#: settings.php:221
+#: settings.php:227
 msgid "Dutch"
 msgstr ""
 
-#: settings.php:222
+#: settings.php:228
 msgid "Norwegian"
 msgstr ""
 
-#: settings.php:223
+#: settings.php:229
 msgid "Polish"
 msgstr ""
 
-#: settings.php:224
+#: settings.php:230
 msgid "Portuguese"
 msgstr ""
 
-#: settings.php:225
+#: settings.php:231
 msgid "Romanian"
 msgstr ""
 
-#: settings.php:226
+#: settings.php:232
 msgid "Russian"
 msgstr ""
 
-#: settings.php:227
+#: settings.php:233
 msgid "Slovak"
 msgstr ""
 
-#: settings.php:228
+#: settings.php:234
 msgid "Slovene"
 msgstr ""
 
-#: settings.php:229
+#: settings.php:235
 msgid "Serbian"
 msgstr ""
 
-#: settings.php:230
+#: settings.php:236
 msgid "Swedish"
 msgstr ""
 
-#: settings.php:231
+#: settings.php:237
 msgid "Thai"
 msgstr ""
 
-#: settings.php:232
+#: settings.php:238
 msgid "Turkish"
 msgstr ""
 
-#: settings.php:233
+#: settings.php:239
 msgid "Ukrainian"
 msgstr ""
 
-#: settings.php:234
+#: settings.php:240
 msgid "Vietnamese"
 msgstr ""
 
-#: settings.php:235
+#: settings.php:241
 msgid "Simplified Chinese"
 msgstr ""
 
-#: settings.php:236
+#: settings.php:242
 msgid "Traditional Chinese"
 msgstr ""
 
-#: settings.php:246
+#: settings.php:252
 msgid "Forces the widget to render in a specific language"
 msgstr ""
 
-#: settings.php:254
+#: settings.php:260
 msgid "Error Message"
 msgstr ""
 
-#: settings.php:261
+#: settings.php:267
 msgid ""
 "Message or text to display when CAPTCHA is ignored or the test is failed."
 msgstr ""
 
-#: settings.php:283
+#: settings.php:289
 msgid "Developer"
 msgstr ""
 
-#: settings.php:294
+#: settings.php:301
+msgid "Support Plugin"
+msgstr ""
+
+#: settings.php:317
 msgid "Ads"
 msgstr ""
