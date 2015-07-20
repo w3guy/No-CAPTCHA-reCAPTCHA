@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 class Ncr_Settings_Page {
 
 	public static function initialize() {
@@ -309,24 +309,6 @@ class Ncr_Settings_Page {
 							<li>Vote "Works" on the plugin's <a href="https://wordpress.org/plugins/no-captcha-recaptcha/#compatibility" target="_blank">WordPress listing</a></li>
 							<li><a href="http://twitter.com/home?status=I%20love%20this%20WordPress%20plugin!%20http://wordpress.org/plugins/no-captcha-recaptcha/" target="_blank">Share your thoughts on Twitter</a></li>
 						</ul></div>
-					</div>
-				</div>
-
-				<div class="postbox">
-					<div class="handlediv"><br></div>
-					<h3 class="hndle" style="text-align: center;"><span><?php _e( 'Ads', 'ncr-captcha' ); ?></span>
-					</h3>
-
-					<div class="inside" style="text-align: center; margin: auto">
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- wp plugin ads -->
-						<ins class="adsbygoogle"
-						     style="display:inline-block;width:250px;height:250px"
-						     data-ad-client="ca-pub-6220933862397367"
-						     data-ad-slot="4902523042"></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
 					</div>
 				</div>
 			</div>

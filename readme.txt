@@ -1,20 +1,20 @@
 === Plugin Name ===
-Contributors: collizo4sky
+Contributors: collizo4sky, adeptplus
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: comments, spam, login, registration, captcha, recaptcha, spammers, bot
 Requires at least: 3.4
 Tested up to: 4.0.1
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Protect WordPress login, registration and comment form with the new No CAPTCHA reCAPTCHA.
+Protect WordPress login, registration and comment form with the new Google's No CAPTCHA reCAPTCHA.
 
 == Description ==
 
-A simple plugin for adding the new No CAPTCHA reCAPTCHA to WordPress login, registration and comment system to protect again spammers.
+A simple plugin for adding the new No CAPTCHA reCAPTCHA by Google to WordPress login, registration and comment system to protect against spam.
 
-== Features ==
+**Features**
 
 *   Option to activate CAPTCHA in either login, registration, comment or combination of two or all.
 *   Choose a theme for the CAPTCHA.
@@ -35,10 +35,20 @@ Any question? post it in the support forum.
 
 == Screenshots ==
 
-1. screenshot-1.png
-2. screenshot-1.png
+1. Add your reCAPTCHA keys.
+2. Select where to activate.
+3. Plugin general settings.
+4. CAPTCHA in action at comment form
+5. CAPTCHA in action at registration form
+6. CAPTCHA in action at login form
 
 == Changelog ==
+
+= 1.0.2 =
+* Fix error where Captcha could be bypassed by disabling Javascript
+
+= 1.0.1 =
+* Fixed header already sent error
 
 = 1.0 =
 * Initial commit
