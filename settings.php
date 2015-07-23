@@ -208,52 +208,31 @@ class Ncr_Settings_Page {
 						<td>
 							<select id="theme" name="ncr_options[language]">
 								<?php
-								$languages = array(
-									__( 'Auto Detect', 'ncr-captcha' )         => '',
-									__( 'English', 'ncr-captcha' )             => 'en',
-									__( 'Arabic', 'ncr-captcha' )              => 'ar',
-									__( 'Bulgarian', 'ncr-captcha' )           => 'bg',
-									__( 'Catalan Valencian', 'ncr-captcha' )   => 'ca',
-									__( 'Czech', 'ncr-captcha' )               => 'cs',
-									__( 'Danish', 'ncr-captcha' )              => 'da',
-									__( 'German', 'ncr-captcha' )              => 'de',
-									__( 'Greek', 'ncr-captcha' )               => 'el',
-									__( 'British English', 'ncr-captcha' )     => 'en_gb',
-									__( 'Spanish', 'ncr-captcha' )             => 'es',
-									__( 'Persian', 'ncr-captcha' )             => 'fa',
-									__( 'French', 'ncr-captcha' )              => 'fr',
-									__( 'Canadian French', 'ncr-captcha' )     => 'fr_ca',
-									__( 'Hindi', 'ncr-captcha' )               => 'hi',
-									__( 'Croatian', 'ncr-captcha' )            => 'hr',
-									__( 'Hungarian', 'ncr-captcha' )           => 'hu',
-									__( 'Indonesian', 'ncr-captcha' )          => 'id',
-									__( 'Italian', 'ncr-captcha' )             => 'it',
-									__( 'Hebrew', 'ncr-captcha' )              => 'iw',
-									__( 'Jananese', 'ncr-captcha' )            => 'ja',
-									__( 'Korean', 'ncr-captcha' )              => 'ko',
-									__( 'Lithuanian', 'ncr-captcha' )          => 'lt',
-									__( 'Latvian', 'ncr-captcha' )             => 'lv',
-									__( 'Dutch', 'ncr-captcha' )               => 'nl',
-									__( 'Norwegian', 'ncr-captcha' )           => 'no',
-									__( 'Polish', 'ncr-captcha' )              => 'pl',
-									__( 'Portuguese', 'ncr-captcha' )          => 'pt',
-									__( 'Romanian', 'ncr-captcha' )            => 'ro',
-									__( 'Russian', 'ncr-captcha' )             => 'ru',
-									__( 'Slovak', 'ncr-captcha' )              => 'sk',
-									__( 'Slovene', 'ncr-captcha' )             => 'sl',
-									__( 'Serbian', 'ncr-captcha' )             => 'sr',
-									__( 'Swedish', 'ncr-captcha' )             => 'sv',
-									__( 'Thai', 'ncr-captcha' )                => 'th',
-									__( 'Turkish', 'ncr-captcha' )             => 'tr',
-									__( 'Ukrainian', 'ncr-captcha' )           => 'uk',
-									__( 'Vietnamese', 'ncr-captcha' )          => 'vi',
-									__( 'Simplified Chinese', 'ncr-captcha' )  => 'zh_cn',
-									__( 'Traditional Chinese', 'ncr-captcha' ) => 'zh_tw'
-								);
+									printf(
+										'<option value="" %s>%s</option>',
+										selected( '', $language, false ),
+										__( 'Auto Detect', 'ncr-captcha' )
+									);
 
-								foreach ( $languages as $key => $value ) {
-									echo "<option value='$value'" . selected( $value, $language, true ) . ">$key</option>";
-								}
+									/** WordPress Translation Install API */
+									require_once( ABSPATH . 'wp-admin/includes/translation-install.php' );
+
+									// display the list of available languages in WP core
+									$available_languages = get_available_languages();
+									$available_translations = wp_get_available_translations();
+									foreach ( $available_languages as $l ) {
+										printf(
+											'<option value="%s" lang="%s"%s>%s</option>',
+											esc_attr( $l ),
+											esc_attr( current( $available_translations[$l]['iso'] ) ),
+											selected( $l, $language, false ),
+											esc_html( $available_translations[$l]['native_name'] )
+										);
+									}
+									printf(
+										'<option value="en_US" lang="en"%s>English (United States)</option>',
+										selected( 'en_US', $language, false )
+									);
 								?>
 							</select>
 
