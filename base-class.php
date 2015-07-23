@@ -44,7 +44,7 @@ class Ncr_No_Captcha_Recaptcha {
 	}
 
 	public static function load_plugin_textdomain() {
-		load_plugin_textdomain( 'espw-plugin', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'ncr-captcha', false, basename( dirname( __FILE__ ) ) . '/lang/' );
 	}
 
 	/** reCAPTCHA header script */
@@ -120,7 +120,7 @@ class Ncr_No_Captcha_Recaptcha {
 			'captcha_registration' => 'yes',
 			'captcha_comment'      => 'yes',
 			'theme'                => 'light',
-			'error_message'        => '<strong>ERROR</strong>: Please retry CAPTCHA'
+			'error_message'        => wp_kses( __( '<strong>ERROR</strong>: Please retry CAPTCHA', 'ncr-catpcha' ), array(  'strong' => array() ) ),
 		);
 
 		add_option( 'ncr_options', $default_options );
