@@ -3,7 +3,12 @@ ob_start();
 class Ncr_Settings_Page {
 
 	public static function initialize() {
-		add_action( 'admin_menu', array( __CLASS__, 'register_menu_page' ) );
+		if( function_exists( 'is_plugin_active_for_network' )
+		  && is_plugin_active_for_network( basename( dirname( __FILE__ ) ) . '/no-captcha-recaptcha.php' ) ){
+			add_action( 'network_admin_menu', array( __CLASS__, 'register_menu_page' ) );
+		} else {
+			add_action( 'admin_menu', array( __CLASS__, 'register_menu_page' ) );
+		}
 	}
 
 
@@ -87,6 +92,7 @@ class Ncr_Settings_Page {
 							<p class="description">
 								<?php
 									_e( 'Used for displaying the CAPTCHA.', 'ncr-captcha' );
+									echo ' ';
 									// escape the URL properly
 									$url = 'https://www.google.com/recaptcha/admin';
 									printf( wp_kses( __( 'Grab it <a href="%s" target="_blank">Here</a>', 'ncr-captcha' ), array(  'a' => array( 'href' => array(), 'target' => array('_blank') ) ) ), esc_url( $url ) );
@@ -105,6 +111,7 @@ class Ncr_Settings_Page {
 							<p class="description">
 								<?php
 									_e( 'Used for communication between your site and Google.', 'ncr-captcha' );
+									echo ' ';
 									// escape the URL properly
 									$url = 'https://www.google.com/recaptcha/admin';
 									printf( wp_kses( __( 'Grab it <a href="%s" target="_blank">Here</a>', 'ncr-captcha' ), array(  'a' => array( 'href' => array(), 'target' => array('_blank') ) ) ), esc_url( $url ) );
