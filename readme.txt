@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: collizo4sky, adeptplus
+Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: comments, spam, login, registration, captcha, recaptcha, spammers, bot
 Requires at least: 3.4
