@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
-Tags: comments, spam, login, registration, captcha, recaptcha, spammers, bot
+Tags: comments, spam, login, registration, captcha, recaptcha, spammers, bot, registration
 Requires at least: 3.4
-Tested up to: 4.0.1
-Stable tag: 1.0.2
+Tested up to: 4.2.4
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
