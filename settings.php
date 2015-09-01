@@ -307,6 +307,30 @@ class Ncr_Settings_Page {
 					</div>
 				</div>
 
+				<div class="postbox" style="text-align: center">
+					<div class="handlediv"><br></div>
+					<h3 class="hndle ui-sortable-handle"><span>Check out ProfilePress Plugin</span></h3>
+
+					<div class="inside">
+						<p>A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple.</p>
+						<strong>Features</strong>
+						<ul>
+							<li>Unlimited front-end login forms</li>
+							<li>Unlimited front-end registration forms</li>
+							<li>Unlimited password reset forms.</li>
+							<li>Automatic login after registration.</li>
+							<li>Social Logins.</li>
+							<li>Custom user redirect users after login & logout</li>
+							<li>One-click widget creator.</li>
+							<li>And lots more.</li>
+							<li></li>
+						</ul>
+						<div><a href="https://wordpress.org/plugins/ppress/" target="_blank">
+								<button class="button-primary" type="button">Download for Free</button>
+							</a></div>
+					</div>
+				</div>
+
 				<div class="postbox">
 					<div class="handlediv"><br></div>
 					<h3 class="hndle" style="text-align: center;">
