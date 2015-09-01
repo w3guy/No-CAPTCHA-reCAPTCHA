@@ -14,6 +14,7 @@ Domain Path: /lang/
 
 require_once dirname(__FILE__). '/base-class.php';
 require_once dirname(__FILE__). '/registration.php';
+require_once dirname(__FILE__). '/buddypress-registration.php';
 require_once dirname(__FILE__). '/comment-form.php';
 require_once dirname(__FILE__). '/login.php';
 require_once dirname(__FILE__). '/settings.php';
@@ -24,6 +25,7 @@ register_uninstall_hook( __FILE__, array( 'Ncr_No_Captcha_Recaptcha', 'on_uninst
 
 Ncr_No_Captcha_Recaptcha::initialize();
 Ncr_Registration_Captcha::initialize();
+Ncr_BP_Registration_Captcha::initialize();
 Ncr_Comment_Captcha::initialize();
 Ncr_Login_Captcha::initialize();
 Ncr_Settings_Page::initialize();
