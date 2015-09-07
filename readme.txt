@@ -22,7 +22,7 @@ A simple plugin for adding the new No CAPTCHA reCAPTCHA by Google to WordPress l
 
 
 ### See Also
-* **[No CAPTCHA reCAPTCHA for WooCommerce](https://wordpress.org/plugins/no-captcha-recaptcha-for-woocommerce/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple.
+* **[No CAPTCHA reCAPTCHA for WooCommerce](https://wordpress.org/plugins/no-captcha-recaptcha-for-woocommerce/)**: Protect WooCommerce login, registration and password reset form against spam using Google's No CAPTCHA reCAPTCHA.
 * **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](http://profilepress.net)
 
 
