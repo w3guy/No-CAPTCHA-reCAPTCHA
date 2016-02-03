@@ -2,7 +2,7 @@
 Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: comments, form, security, buddypress, spam, login, registration, captcha, recaptcha, spammers, bot, registration
-Requires at least: 3.4
+Requires at least: 4.0
 Tested up to: 4.3
 Stable tag: 1.1
 License: GPLv2 or later
