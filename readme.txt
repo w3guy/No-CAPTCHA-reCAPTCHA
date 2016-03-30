@@ -3,8 +3,8 @@ Contributors: Collizo4sky
 Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
 Tags: comments, form, security, buddypress, spam, login, registration, captcha, recaptcha, spammers, bot, registration
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.1.1
+Tested up to: 4.4.2
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,9 @@ Any question? post it in the support forum.
 7. CAPTCHA in action at buddypress registration form
 
 == Changelog ==
+
+= 1.1.2 =
+* Force delete comments that fails captcha test.
 
 = 1.1.1 =
 * Remove overzealous activation check.
