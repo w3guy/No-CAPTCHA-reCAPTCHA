@@ -14,7 +14,7 @@ class Ncr_Comment_Captcha extends Ncr_No_Captcha_Recaptcha {
 			add_action( 'wp_head', array( __CLASS__, 'header_script' ) );
 
 			// adds the captcha to the comment form
-			add_action( 'comment_form', array( __CLASS__, 'display_captcha' ) );
+			add_action( 'comment_form_after_fields', array( __CLASS__, 'display_captcha' ) );
 
 			// authenticate the captcha answer
 			add_filter( 'preprocess_comment', array( __CLASS__, 'validate_captcha_comment_field' ) );
