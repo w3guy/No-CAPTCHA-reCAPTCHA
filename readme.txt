@@ -1,11 +1,11 @@
 === Plugin Name ===
 Contributors: Collizo4sky
-Donate link: https://flattr.com/submit/auto?user_id=tech4sky&url=http%3A%2F%2Fw3guy.com
-Tags: comments, form, security, buddypress, spam, login, registration, captcha, recaptcha, spammers, bot, registration
+Donate link: https://mailoptin.io
+Tags: recaptcha, login, comment form, registration form, security, no captcha recaptcha, buddypress, comments, spam, registration, captcha, spammers, bot, registration
 Requires at least: 4.0
 Requires PHP: 5.4
 Tested up to: 4.8.1
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,7 @@ A simple plugin for adding the new No CAPTCHA reCAPTCHA by Google to WordPress l
 ### Plugins you will like
 * **[No CAPTCHA reCAPTCHA for WooCommerce](https://wordpress.org/plugins/no-captcha-recaptcha-for-woocommerce/)**: Protect WooCommerce login, registration and password reset form against spam using Google's No CAPTCHA reCAPTCHA.
 * **[ProfilePress](https://wordpress.org/plugins/ppress/)**: A shortcode based WordPress form builder that makes building custom login, registration and password reset forms stupidly simple. [More info here](http://profilepress.net)
-* **[MailOptin](https://mailoptin.io/)** - The best WordPress email optin forms, email automation & newsletters plugin in the market.
+* **[MailOptin](https://wordpress.org/plugins/mailoptin/)** - The best WordPress email optin forms, email automation & newsletters plugin in the market.
 
 == Installation ==
 
@@ -51,6 +51,9 @@ Any question? post it in the support forum.
 7. CAPTCHA in action at buddypress registration form
 
 == Changelog ==
+
+= 1.2.1 =
+* Fixed bug where logged user couldnt submit comments
 
 = 1.2 =
 * Add margin bottom spacing before submit button.
