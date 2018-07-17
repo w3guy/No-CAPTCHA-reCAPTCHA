@@ -12,6 +12,7 @@ Text Domain: ncr-captcha
 Domain Path: /lang/
 */
 
+require_once dirname(__FILE__). '/mo-admin-notice.php';
 require_once dirname(__FILE__). '/base-class.php';
 require_once dirname(__FILE__). '/registration.php';
 require_once dirname(__FILE__). '/buddypress-registration.php';
