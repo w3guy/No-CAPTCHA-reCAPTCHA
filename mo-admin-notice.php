@@ -53,7 +53,7 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
                     <p>
 						<?php
 						printf(
-							__( 'Powerful free plugin that convert website visitors to email subscribers with %1$sbeautiful conversion optimized forms%2$s and boost revenue with %1$sautomated newsletters%2$s.' ),
+							__( 'Powerful free plugin that %1$sconvert website visitors to email subscribers%2$s with beautiful conversion optimized forms%2$s and %1$sincrease revenue%2$s with automated newsletters.' ),
 							'<span class="mo-stylize"><strong>', '</strong></span>' );
 						?>
                     </p>
