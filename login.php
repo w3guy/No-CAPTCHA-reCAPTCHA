@@ -7,7 +7,7 @@ class Ncr_Login_Captcha extends Ncr_No_Captcha_Recaptcha {
 		// initialize if login is activated
 		if ( isset(self::$plugin_options['captcha_login']) && self::$plugin_options['captcha_login'] == 'yes') {
 			// adds the captcha to the login form
-			add_action( 'login_form', array( __CLASS__, 'display_captcha' ) );
+			add_action( 'login_form', array( __CLASS__, 'display_captcha' ), 999999999999999 );
 
 			// authenticate the captcha answer
 			add_action( 'wp_authenticate_user', array( __CLASS__, 'validate_captcha' ), 10, 2 );
