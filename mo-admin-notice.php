@@ -7,15 +7,16 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 			add_action( 'admin_notices', array( $this, 'admin_notice' ) );
 			add_action( 'network_admin_notices', array( $this, 'admin_notice' ) );
 
-			add_action( 'admin_post_mo_dismiss_adnotice', array( $this, 'dismiss_admin_notice' ) );
+			add_action( 'admin_init', array( $this, 'dismiss_admin_notice' ) );
 		}
 
 		public function dismiss_admin_notice() {
+			if ( ! isset( $_GET['mo-adaction'] ) || $_GET['mo-adaction'] != 'mo_dismiss_adnotice' ) {
+				return;
+			}
+
 			$url = admin_url();
 			update_option( 'mo_dismiss_adnotice', 'true' );
-			if ( isset( $_GET['url'] ) ) {
-				$url = esc_url_raw( $_GET['url'] );
-			}
 
 			wp_redirect( $url );
 			exit;
@@ -33,11 +34,10 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 
 			$dismiss_url = esc_url_raw(
 				add_query_arg(
-					[
-						'action' => 'mo_dismiss_adnotice',
-						'url'    => $this->current_admin_url()
-					],
-					admin_url( 'admin-post.php' )
+					array(
+						'mo-adaction' => 'mo_dismiss_adnotice'
+					),
+					admin_url()
 				)
 			);
 			$this->notice_css();
@@ -57,9 +57,6 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 							'<span class="mo-stylize"><strong>', '</strong></span>' );
 						?>
                     </p>
-                    <p>
-                        <iframe width="480" height="270" src="https://www.youtube.com/embed/Mix9_gTTlrE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    </p>
                 </div>
                 <div class="mo-notice-other-half">
 					<?php if ( ! $this->is_plugin_installed() ) : ?>
@@ -72,6 +69,9 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 							<?php _e( 'Activate MailOptin Now!' ); ?>
                         </a>
 					<?php endif; ?>
+                    <div class="mo-notice-learn-more">
+                        <a target="_blank" href="https://mailoptin.io/?utm_source=moadmin_notice&utm_medium=no-captcha-recaptcha">Learn more</a>
+                    </div>
                 </div>
                 <a href="<?php echo $dismiss_url; ?>">
                     <button type="button" class="notice-dismiss">
@@ -90,7 +90,7 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 				$uri .= ':' . $parts['port'];
 			}
 
-			$uri .= add_query_arg( [] );
+			$uri .= add_query_arg( array() );
 
 			return $uri;
 		}
@@ -109,23 +109,22 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 			?>
             <style type="text/css">
                 .mo-admin-notice {
-                    background: #0b11cfba;
-                    color: #fff;
-                    border-left-color: #000;
+                    background: #fff;
+                    color: #000;
+                    border-left-color: #46b450;
                     position: relative;
                 }
 
                 .mo-admin-notice .notice-dismiss:before {
-                    color: #fff;
+                    color: #72777c;
                 }
 
                 .mo-admin-notice .mo-stylize {
                     line-height: 2;
-                    border-bottom: 2px solid #ff0412;
                 }
 
                 .mo-admin-notice .button-primary {
-                    background: #ca4a1f;
+                    background: #006799;
                     text-shadow: none;
                     border: 0;
                     box-shadow: none;
@@ -134,17 +133,27 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
                 .mo-notice-first-half {
                     width: 66%;
                     display: inline-block;
+                    margin: 10px 0;
                 }
 
                 .mo-notice-other-half {
                     width: 33%;
                     display: inline-block;
-                    padding: 15% 0;
+                    padding: 20px 0;
                     position: absolute;
+                    text-align: center;
                 }
 
                 .mo-notice-first-half p {
-                    font-size: 18px;
+                    font-size: 14px;
+                }
+
+                .mo-notice-learn-more a {
+                    margin: 10px;
+                }
+
+                .mo-notice-learn-more {
+                    margin-top: 10px;
                 }
             </style>
 			<?php
@@ -163,3 +172,54 @@ if ( ! class_exists( 'MO_Admin_Notice' ) ) {
 }
 
 MO_Admin_Notice::instance();
+
+if ( ! class_exists('MO_Feature_Plugin')) {
+    class MO_Feature_Plugin
+    {
+        public static function init()
+        {
+            if (class_exists('MailOptin\Libsodium\Libsodium')) return;
+
+            add_filter('install_plugins_table_api_args_featured', [__CLASS__, 'featured_plugins_tab']);
+        }
+
+        public static function featured_plugins_tab($args)
+        {
+            add_filter('plugins_api_result', [__CLASS__, 'inject_plugin'], 10, 3);
+
+            return $args;
+        }
+
+        public static function inject_plugin($res, $action, $args)
+        {
+            //remove filter to avoid infinite loop.
+            remove_filter('plugins_api_result', [__CLASS__, 'inject_plugin'], 10, 3);
+
+            $api = plugins_api('plugin_information', array(
+                'slug'   => 'mailoptin',
+                'is_ssl' => is_ssl(),
+                'fields' => array(
+                    'banners'           => true,
+                    'reviews'           => true,
+                    'downloaded'        => true,
+                    'active_installs'   => true,
+                    'icons'             => true,
+                    'short_description' => true,
+                )
+            ));
+
+            if ( ! is_wp_error($api)) {
+                array_unshift($res->plugins, $api);
+            }
+
+            return $res;
+        }
+
+        public static function instance()
+        {
+            add_action('plugins_loaded', [__CLASS__, 'init']);
+        }
+    }
+
+    MO_Feature_Plugin::instance();
+}
