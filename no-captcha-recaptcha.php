@@ -4,7 +4,7 @@
 Plugin Name: No CAPTCHA reCAPTCHA
 Plugin URI: http://w3guy.com
 Description: Protect WordPress login, registration and comment form from spam with the new No CAPTCHA reCAPTCHA
-Version: 1.3.3
+Version: 1.3.4
 Author: MailOptin Team
 Author URI: https://mailoptin.io
 License: GPL2
