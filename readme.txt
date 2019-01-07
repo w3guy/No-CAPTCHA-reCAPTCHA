@@ -52,7 +52,7 @@ Any question? post it in the support forum.
 
 == Changelog ==
 
-= 1.3.3 =
+= 1.3.4 =
 * Tuned down admin notices.
 
 = 1.3.3 =
